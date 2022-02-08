@@ -1,0 +1,405 @@
+{extend name='public/base' /}
+
+{block name='seo' /}
+<title>{$title|default='标题'}</title>
+<meta name="keywords" content="{$keywords|default='关键字'}">
+<meta name="description" content="{$desc|default='描述'}">
+<!-- App favicon -->
+<!-- <link rel="shortcut icon" href="__STATIC__/static/h-ui//images/favicon.ico"> -->
+
+<!-- C3 charts css -->
+<link href="__STATIC__/static/assets/css/c3.min.css" rel="sstylesheet" type="text/css" />
+
+<!-- App css -->
+<link href="__STATIC__/static/assets/css/icons.css" rel="stylesheet" type="text/css" />
+<link href="__STATIC__/static/assets/css/metismenu.min.css" rel="stylesheet" type="text/css" />
+<link href="__STATIC__/static/assets/css/style.css" rel="stylesheet" type="text/css" />
+<style>
+    .videoClass {
+        /* padding-top: 200px; */
+        width: 62.7vw;
+        height: 101vh;
+    }
+
+    @media screen and (max-width:617px) {
+        .videoClass {
+            width: 89vw;
+            height: 40vh;
+            padding-right: 10px;
+        }
+
+        .jianJu {
+            height: 20px;
+        }
+    }
+</style>
+
+<script src="__STATIC__/static/assets/js/modernizr.min.js"></script>
+
+{/block}
+
+
+{block name='content' /}
+<section class="Hui-article-box" style="position: absolute;">
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
+        <span class="c-gray en">&gt;</span>
+        蘑菇管理
+        <span class="c-gray en">&gt;</span>
+        蘑菇分析 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px"
+            href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+    </nav>
+    <div class="Hui-article">
+        <!--视频-->
+
+        <!-- <div id="wrapper" style="margin-top: 50px;"> -->
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+                <div class="container-fluid">
+
+                    <!-- end row -->
+
+                    <!-- <div class="col-lg-3 col-md-6"> -->
+                    <!-- <div class="card-box widget-box-two widget-two-custom"> -->
+                    <div style="padding-top: 50px;">
+                        <video id="videojs-contrib-hls-player" poster=""
+                            class="video-js vjs-default-skin  col-md-9 videoClass" controls>
+                            <source src="" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- </div> -->
+                    <div class="row">
+                        <div class="jianJu"></div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card-box widget-box-two widget-two-custom">
+                                <i class="mdi mdi-crown widget-two-icon"></i>
+                                <div class="wigdet-two-content">
+                                    <p class="m-0 text-uppercase font-bold font-secondary text-overflow">优品数量</p>
+                                    <h2 class="font-600"><span><i class="mdi mdi-arrow-up"></i></span> <span
+                                            data-plugin="counterup">141</span></h2>
+                                    <p class="m-0">2021-11-24</p>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card-box widget-box-two widget-two-custom">
+                                <i class="mdi mdi-crown widget-two-icon"></i>
+                                <div class="wigdet-two-content">
+                                    <p class="m-0 text-uppercase font-bold font-secondary text-overflow">褐变数量</p>
+                                    <h2 class="font-600"><span><i class="mdi mdi-arrow-up"></i></span> <span
+                                            data-plugin="counterup">87</span></h2>
+                                    <p class="m-0">2021-11-24</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card-box widget-box-two widget-two-custom">
+                                <i class="mdi mdi-crown widget-two-icon"></i>
+                                <div class="wigdet-two-content">
+                                    <p class="m-0 text-uppercase font-bold font-secondary text-overflow">残缺数量</p>
+                                    <h2 class="font-600"><span><i class="mdi mdi-arrow-up"></i></span> <span
+                                            data-plugin="counterup">63</span></h2>
+                                    <p class="m-0">2021-11-24</p>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card-box widget-box-two widget-two-custom">
+                                <i class="mdi mdi-crown widget-two-icon"></i>
+                                <div class="wigdet-two-content">
+                                    <p class="m-0 text-uppercase font-bold font-secondary text-overflow">大小比值</p>
+                                    <h2 class="font-600"><span><i class="mdi mdi-arrow-up"></i></span> <span
+                                            data-plugin="counterup">30</span>%</h2>
+                                    <p class="m-0">2021-11-24</p>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+
+                    </div>
+                    <!-- end row -->
+
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">等级划分</h4>
+
+                                <div class="text-center">
+                                    <h5 class="font-normal text-muted">蘑菇等级</h5>
+                                    <!-- <h3 class="m-b-30"><i
+                                                class="mdi mdi-arrow-up-bold-hexagon-outline text-success"></i> 25643
+                                            <small></small>
+                                        </h3> -->
+                                </div>
+
+                                <div class="chart-container">
+                                    <div class="" style="height:280px" id="platform_type_dates_donut"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!--  -->
+                        <div class="col-lg-4">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">大小划分</h4>
+
+                                <div class="text-center">
+                                    <h5 class="font-normal text-muted">蘑菇大小</h5>
+                                    <!-- <h3 class="m-b-30"><i
+                                                class="mdi mdi-arrow-down-bold-hexagon-outline text-danger"></i> 5623
+                                            <small>USD</small>
+                                        </h3> -->
+                                </div>
+
+                                <div class="chart-container">
+                                    <div class="" style="height:280px" id="user_type_bar"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">残缺划分</h4>
+
+                                <div class="text-center">
+                                    <h5 class="font-normal text-muted">蘑菇残缺</h5>
+                                
+                                </div>
+
+                                <div class="chart-container">
+                                    <div class="chart has-fixed-height" style="height:280px" id="page_views_today">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+
+
+
+
+
+                    <div class="row">
+
+
+                        <!-- <div class="col-lg-3">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">褐变划分</h4>
+                                <div class="text-center">
+                                    <h5 class="font-normal text-muted">蘑菇褐变</h5>
+                                
+                                </div>
+                                <div class="widget-chart text-center">
+
+                                    <div id="3d-exploded-chart" style="height: 270px;"></div>
+
+                                -->
+
+			<!--<div class="col-lg-3">		
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">Total Unique Visitors</h4>
+
+                                <div class="google-chart text-center">
+                                    <div class="chart m-t-30" id="3d-exploded-chart"></div>
+                                </div>
+                            </div>
+			</div>-->
+			<div class="col-lg-3">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">褐变划分</h4>
+                                <div class="text-center">
+                                    <h5 class="font-normal text-muted">蘑菇褐变</h5>
+
+                                </div>
+                                <div class="widget-chart text-center">
+                                   <div id="pie-chart-container" style="height: 270px;"></div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--<div class="col-md-6">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0">褐变</h4>
+                                <div class="google-chart text-center">
+                                    <div class="chart m-t-30" id="3d-exploded-chart"></div>
+                                </div>
+                            </div>
+			</div>-->
+
+                        <div class="col-lg-3">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">品质划分</h4>
+                                <div class="text-center">
+                                    <h5 class="font-normal text-muted">蘑菇品质</h5>
+                                
+                                </div>
+                                <div class="widget-chart text-center">
+
+                                    <div id="donut-chart" style="height: 270px;"></div>
+
+                                    <!-- < -->
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-lg-6">
+                            <div class="card-box">
+                                <h4 class="m-t-0 header-title"><b>蘑菇日志</b></h4>
+                                <p class="text-muted font-14 m-b-20">
+                                    记录每个蘑菇情况
+                                </p>
+
+				<!--  <div class="table-responsive"> -->
+                   			<table class="table table-hover m-0 table-actions-bar table-sort">
+                                        <thead>
+                                                <tr class="text-c">
+                                                        <th width="50">编号</th>
+                                                        <th width="220">蘑菇图</th>
+                                                        <th width="120">坐标</th>
+                                                        <th width="120">蘑菇等级</th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                        {volist name='gradeList' id='vo'}
+                                                <tr class="text-c">
+                                                        <td>{$vo.number}</td>
+                                                        <td><img src="data:image/jpg/png/gif;base64,{$vo.mushroom}"></td>
+                                                        <td>{$vo.coordinate}</td>
+                                                        <td>{$vo.grade}</td>
+                                                </tr>
+                                        {/volist}
+                                        </tbody>
+                                </table>
+			<!--	</div> -->
+                            </div>
+
+                        </div>
+                        <!-- end col -->
+
+
+
+                    </div>
+                    <!--- end row -->
+
+                </div> <!-- container -->
+
+            </div> <!-- content -->
+        </div>
+    </div>
+</section>
+
+{/block}
+
+
+{block name='js'}
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__STATIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/laypage/1.2/laypage.js"></script>
+
+<!-- jQuery  -->
+<!-- <script src="__STATIC__/static/assets/js/tether.min.js"></script> -->
+<script src="__STATIC__/static/assets/js/bootstrap.min.js"></script>
+<script src="__STATIC__/static/assets/js/metisMenu.min.js"></script>
+<script src="__STATIC__/static/assets/js/waves.js"></script>
+<script src="__STATIC__/static/assets/js/jquery.slimscroll.js"></script>
+<!-- x<script src="__STATIC__/static/assets/js/jquery.min.js"></script> -->
+
+<!-- Counter js  -->
+<script src="__STATIC__/static/assets/js/jquery.waypoints.min.js"></script>
+<script src="__STATIC__/static/assets/js/jquery.counterup.min.js"></script>
+
+<!--C3 Chart-->
+<script type="text/javascript" src="__STATIC__/static/assets/js/d3.min.js"></script>
+<script type="text/javascript" src="__STATIC__/static/assets/js/c3.min.js"></script>
+
+<!--Echart Chart-->
+<script src="__STATIC__/static/assets/js/echarts-all.js"></script>
+<script src="__STATIC__/static/assets/plugins/flot-chart/jquery.flot.min.js"></script>
+<script src="__STATIC__/static/assets/plugins/flot-chart/jquery.flot.time.js"></script>
+<script src="__STATIC__/static/assets/plugins/flot-chart/jquery.flot.tooltip.min.js"></script>
+<script src="__STATIC__/static/assets/plugins/flot-chart/jquery.flot.resize.js"></script>
+<script src="__STATIC__/static/assets/plugins/flot-chart/jquery.flot.pie.js"></script>
+<script src="__STATIC__/static/assets/plugins/flot-chart/jquery.flot.selection.js"></script>
+<script src="__STATIC__/static/assets/plugins/flot-chart/jquery.flot.stack.js"></script>
+<script src="__STATIC__/static/assets/plugins/flot-chart/jquery.flot.orderBars.min.js"></script>
+<script src="__STATIC__/static/assets/plugins/flot-chart/jquery.flot.crosshair.js"></script>
+<script src="__STATIC__/static/assets/plugins/flot-chart/curvedLines.js"></script>
+<script src="__STATIC__/static/assets/plugins/flot-chart/jquery.flot.axislabels.js"></script>
+
+<!-- Dashboard init -->
+<script src="__STATIC__/static/assets/pages/jquery.dashboard.js"></script>
+<!--<script src="__STATIC__/static/assets/pages/jquery.google-charts.init.js"></script> -->
+
+
+
+<!-- App js -->
+<script src="__STATIC__/static/assets/js/jquery.core.js"></script>
+<script src="__STATIC__/static/assets/js/jquery.app.js"></script>
+
+
+<!-- <script src="http://zhibo.syau.edu.cn/jquery.min.js"></script>  -->
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<!-- <script src="http://zhibo.syau.edu.cn/bootstrap.min.js"></script> -->
+<!-- <link href="http://zhibo.syau.edu.cn/front/video-js.min.css" rel="stylesheet">
+<script src="http://zhibo.syau.edu.cn/front/video.min.js"></script>
+<script src="http://zhibo.syau.edu.cn/front/videojs-flash.js"></script>
+<script src="http://zhibo.syau.edu.cn/front/videojs-contrib-hls.js"></script> -->
+<link href="__STATIC__/static/video/video-js.min.css" rel="stylesheet">
+<script src="__STATIC__/static/video/video.min.js"></script>
+<script src="__STATIC__/static/video/videojs-flash.js"></script>
+<script src="__STATIC__/static/video/videojs-contrib-hls.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('source').attr("src", "__STATIC__/static/video/video.mp4");
+        (function (window, videojs) {
+            var player = window.player = videojs('videojs-contrib-hls-player');
+            var loadUrl = document.getElementById('load-url');
+            var url = document.getElementById('url');
+            // loadUrl.addEventListener('submit', function (event) {
+            //     event.preventDefault();
+            //     player.src({
+            //         src: url.value,
+            //         type: 'application/x-mpegURL'
+            //     });
+            //     return    false;
+            // });
+        }(window, window.videojs));
+    });
+
+
+</script>
+	<script>
+$(function(){
+
+        $('.table-sort tbody').on( 'click', 'tr', function () {
+                if ( $(this).hasClass('selected') ) {
+                        $(this).removeClass('selected');
+                }
+                else {
+                        table.$('tr.selected').removeClass('selected');
+                        $(this).addClass('selected');
+                }
+        });
+});
+function member_show(title,url,id,w,h){
+        layer_show(title,url,w,h);
+}
+
+</script>
+
+{/block}
+</body>
+
+</html>

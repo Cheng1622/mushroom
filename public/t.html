@@ -1,0 +1,439 @@
+
+
+
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- App favicon -->
+<!-- <link rel="shortcut icon" href="/static/static/h-ui//images/favicon.ico"> -->
+
+<!-- C3 charts css -->
+<link href="/static/static/assets/css/c3.min.css" rel="sstylesheet" type="text/css" />
+
+<!-- App css -->
+<link href="/static/static/assets/css/icons.css" rel="stylesheet" type="text/css" />
+<link href="/static/static/assets/css/metismenu.min.css" rel="stylesheet" type="text/css" />
+<link href="/static/static/assets/css/style.css" rel="stylesheet" type="text/css" />
+
+<script src="/static/static/assets/js/modernizr.min.js"></script>
+
+
+
+
+
+<section class="Hui-article-box" style="position: absolute;">
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
+        <span class="c-gray en">&gt;</span>
+        蘑菇管理
+        <span class="c-gray en">&gt;</span>
+        蘑菇分析 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px"
+            href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+    </nav>
+    <div class="Hui-article">
+        <!--视频-->
+
+        <!-- <div id="wrapper" style="margin-top: 50px;"> -->
+        <div class="content-page" style="margin-top: 50px;">
+            <!-- Start content -->
+            <div class="content">
+                <div class="container-fluid">
+
+                    <!-- end row -->
+
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6">
+                            <!-- <div class="card-box widget-box-two widget-two-custom"> -->
+                            <!-- <video id="videojs-contrib-hls-player" poster=""
+                                class="video-js vjs-default-skin syau-2019 col-md-9  col-xs-12 col-md-offset-0"
+                                controls>
+                                <source src="" type="application/x-mpegURL">
+                            </video> -->
+                            <!-- </div> -->
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card-box widget-box-two widget-two-custom">
+                                <i class="mdi mdi-crown widget-two-icon"></i>
+                                <div class="wigdet-two-content">
+                                    <p class="m-0 text-uppercase font-bold font-secondary text-overflow"
+                                        title="Statistics">褐变程度</p>
+                                    <h2 class="font-600"><span><i class="mdi mdi-arrow-up"></i></span> <span
+                                            data-plugin="counterup">563</span></h2>
+                                    <p class="m-0">Jan - Apr 2017</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card-box widget-box-two widget-two-custom">
+                                <i class="mdi mdi-crown widget-two-icon"></i>
+                                <div class="wigdet-two-content">
+                                    <p class="m-0 text-uppercase font-bold font-secondary text-overflow"
+                                        title="Statistics">残缺程度</p>
+                                    <h2 class="font-600"><span><i class="mdi mdi-arrow-up"></i></span> <span
+                                            data-plugin="counterup">563</span></h2>
+                                    <p class="m-0">Jan - Apr 2017</p>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card-box widget-box-two widget-two-custom">
+                                <i class="mdi mdi-auto-fix widget-two-icon"></i>
+                                <div class="wigdet-two-content">
+                                    <p class="m-0 text-uppercase font-bold font-secondary text-overflow"
+                                        title="Statistics">大小比值</p>
+                                    <h2 class="font-600"><span><i class="mdi mdi-arrow-up"></i></span> <span
+                                            data-plugin="counterup">2.07</span>%</h2>
+                                    <p class="m-0">Jan - Apr 2017</p>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+
+                    </div>
+                    <!-- end row -->
+
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">等级划分</h4>
+
+                                <div class="text-center">
+                                    <h5 class="font-normal text-muted">蘑菇等级</h5>
+                                    <!-- <h3 class="m-b-30"><i
+                                                class="mdi mdi-arrow-up-bold-hexagon-outline text-success"></i> 25643
+                                            <small></small>
+                                        </h3> -->
+                                </div>
+
+                                <div class="chart-container">
+                                    <div class="" style="height:280px" id="platform_type_dates_donut"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!--  -->
+                        <div class="col-lg-4">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">大小划分</h4>
+
+                                <div class="text-center">
+                                    <h5 class="font-normal text-muted">蘑菇大小</h5>
+                                    <!-- <h3 class="m-b-30"><i
+                                                class="mdi mdi-arrow-down-bold-hexagon-outline text-danger"></i> 5623
+                                            <small>USD</small>
+                                        </h3> -->
+                                </div>
+
+                                <div class="chart-container">
+                                    <div class="" style="height:280px" id="user_type_bar"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">褐变划分</h4>
+
+                                <div class="text-center">
+                                    <h5 class="font-normal text-muted">蘑菇褐变</h5>
+                                    <!-- <h3 class="m-b-30"><i
+                                                class="mdi mdi-arrow-up-bold-hexagon-outline text-success"></i> 12548
+                                            <small>USD</small>
+                                        </h3> -->
+                                </div>
+
+                                <div class="chart-container">
+                                    <div class="chart has-fixed-height" style="height:280px" id="page_views_today">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+
+
+
+
+
+                    <div class="row">
+
+
+                        <div class="col-lg-3">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">残缺划分</h4>
+
+                                <div class="widget-chart text-center">
+
+                                    <div id="pie-chart" style="height: 270px;"></div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="card-box">
+                                <h4 class="header-title m-t-0 m-b-30">品质划分</h4>
+
+                                <div class="widget-chart text-center">
+
+                                    <div id="donut-chart" style="height: 270px;"></div>
+
+                                    <!-- < -->
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-lg-6">
+                            <div class="card-box">
+                                <h4 class="m-t-0 header-title"><b>蘑菇日志</b></h4>
+                                <p class="text-muted font-14 m-b-20">
+                                    记录每个蘑菇情况
+                                </p>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover m-0 table-actions-bar">
+
+                                        <thead>
+                                            <tr>
+                                                <th>蘑菇</th>
+                                                <th>坐标</th>
+                                                <th>时间</th>
+                                                <th>等级</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src="/static/static/assets/images/users/avatar-2.jpg"
+                                                        alt="contact-img" title="contact-img"
+                                                        class="rounded-circle thumb-sm" />
+                                                </td>
+
+                                                <td>
+                                                    New York
+                                                </td>
+
+                                                <td>
+                                                    Full Time
+                                                </td>
+
+                                                <td>
+                                                    3265
+                                                </td>
+
+                                                <td>
+                                                    <a href="#" class="table-action-btn"><i
+                                                            class="mdi mdi-pencil"></i></a>
+                                                    <a href="#" class="table-action-btn"><i
+                                                            class="mdi mdi-close"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="/static/static/assets/images/users/avatar-3.jpg"
+                                                        alt="contact-img" title="contact-img"
+                                                        class="rounded-circle thumb-sm" />
+                                                </td>
+
+
+                                                <td>
+                                                    California
+                                                </td>
+
+                                                <td>
+                                                    Part Time
+                                                </td>
+
+                                                <td>
+                                                    1365
+                                                </td>
+
+                                                <td>
+                                                    <a href="#" class="table-action-btn"><i
+                                                            class="mdi mdi-pencil"></i></a>
+                                                    <a href="#" class="table-action-btn"><i
+                                                            class="mdi mdi-close"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="/static/static/assets/images/users/avatar-4.jpg"
+                                                        alt="contact-img" title="contact-img"
+                                                        class="rounded-circle thumb-sm" />
+                                                </td>
+
+                                                <td>
+                                                    New York
+                                                </td>
+
+                                                <td>
+                                                    Full Time
+                                                </td>
+
+                                                <td>
+                                                    115248
+                                                </td>
+
+                                                <td>
+                                                    <a href="#" class="table-action-btn"><i
+                                                            class="mdi mdi-pencil"></i></a>
+                                                    <a href="#" class="table-action-btn"><i
+                                                            class="mdi mdi-close"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="/static/static/assets/images/users/avatar-5.jpg"
+                                                        alt="contact-img" title="contact-img"
+                                                        class="rounded-circle thumb-sm" />
+                                                </td>
+
+                                                <td>
+                                                    New York
+                                                </td>
+
+                                                <td>
+                                                    Part Time
+                                                </td>
+
+                                                <td>
+                                                    2451
+                                                </td>
+
+                                                <td>
+                                                    <a href="#" class="table-action-btn"><i
+                                                            class="mdi mdi-pencil"></i></a>
+                                                    <a href="#" class="table-action-btn"><i
+                                                            class="mdi mdi-close"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="/static/static/assets/images/users/avatar-8.jpg"
+                                                        alt="contact-img" title="contact-img"
+                                                        class="rounded-circle thumb-sm" />
+                                                </td>
+
+                                                <td>
+                                                    Australia
+                                                </td>
+
+                                                <td>
+                                                    Part Time
+                                                </td>
+
+                                                <td>
+                                                    3265
+                                                </td>
+
+                                                <td>
+                                                    <a href="#" class="table-action-btn"><i
+                                                            class="mdi mdi-pencil"></i></a>
+                                                    <a href="#" class="table-action-btn"><i
+                                                            class="mdi mdi-close"></i></a>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end col -->
+
+
+
+                    </div>
+                    <!--- end row -->
+
+                </div> <!-- container -->
+
+            </div> <!-- content -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/static/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="/static/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/static/lib/laypage/1.2/laypage.js"></script>
+
+<!-- jQuery  -->
+<!-- <script src="/static/static/assets/js/tether.min.js"></script> -->
+<script src="/static/static/assets/js/bootstrap.min.js"></script>
+<script src="/static/static/assets/js/metisMenu.min.js"></script>
+<script src="/static/static/assets/js/waves.js"></script>
+<script src="/static/static/assets/js/jquery.slimscroll.js"></script>
+<!-- x<script src="/static/static/assets/js/jquery.min.js"></script> -->
+
+<!-- Counter js  -->
+<script src="/static/static/assets/js/jquery.waypoints.min.js"></script>
+<script src="/static/static/assets/js/jquery.counterup.min.js"></script>
+
+<!--C3 Chart-->
+<script type="text/javascript" src="/static/static/assets/js/d3.min.js"></script>
+<script type="text/javascript" src="/static/static/assets/js/c3.min.js"></script>
+
+<!--Echart Chart-->
+<script src="/static/static/assets/js/echarts-all.js"></script>
+
+<!-- Dashboard init -->
+<script src="/static/static/assets/pages/jquery.dashboard.js"></script>
+
+<!-- App js -->
+<script src="/static/static/assets/js/jquery.core.js"></script>
+<script src="/static/static/assets/js/jquery.app.js"></script>
+
+
+<!-- <script src="http://zhibo.syau.edu.cn/jquery.min.js"></script>  -->
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<!-- <script src="http://zhibo.syau.edu.cn/bootstrap.min.js"></script> -->
+<!-- <link href="http://zhibo.syau.edu.cn/front/video-js.min.css" rel="stylesheet">
+<script src="http://zhibo.syau.edu.cn/front/video.min.js"></script>
+<script src="http://zhibo.syau.edu.cn/front/videojs-flash.js"></script>
+<script src="http://zhibo.syau.edu.cn/front/videojs-contrib-hls.js"></script> -->
+<!-- <link href="/static/static/video/video-js.min.css" rel="stylesheet">
+<script src="/static/static/video/video.min.js"></script>
+<script src="/static/static/video/videojs-flash.js"></script>
+<script src="/static/static/video/videojs-contrib-hls.js"></script> -->
+<script type="text/javascript">
+    $(function () {
+        // $('source').attr("src", "https://cctvalih5ca.v.myalicdn.com/live/cctv1_2/index.m3u8");
+        // (function (window, videojs) {
+        //     var player = window.player = videojs('videojs-contrib-hls-player');
+        //     var loadUrl = document.getElementById('load-url');
+        //     var url = document.getElementById('url');
+        //         loadUrl.addEventListener('submit', function (event) {
+        //             event.preventDefault();
+        //             player.src({
+        //                 src: url.value,
+        //                 type: 'application/x-mpegURL'
+        //             });
+        //             return    false;
+        //         });
+        // }(window, window.videojs));
+    });
+
+    
+</script>
+
+</body>
+
+</html>
