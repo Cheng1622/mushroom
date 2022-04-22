@@ -50,7 +50,7 @@ LOCK TABLES `user` WRITE;
 
 INSERT INTO `user` (`id`, `name`, `password`, `email`, `role`, `status`, `create_time`, `update_time`, `delete_time`, `login_time`, `login_count`, `is_delete`)
 VALUES
-	(1,'admin','74be16979710d4c4e7c6647856088456','admin123@php.cn',0,1,1501493848,1502340075,NULL,1502339370,20,1),
+	(1,'admin','e10adc3949ba59abbe56e057f20f883e','admin123@php.cn',0,1,1501493848,1502340075,NULL,1502339370,20,1),
 	(3,'peter','e10adc3949ba59abbe56e057f20f883e','peter888@php.cn',1,1,1501582576,1502260457,NULL,1502168741,15,1),
 	(6,'jack','e10adc3949ba59abbe56e057f20f883e','jack123@php.cn',0,1,1502064844,1502260457,NULL,1502082773,1,1),
 	(7,'zhu','e10adc3949ba59abbe56e057f20f883e','zhu@php.cn',0,1,NULL,1502260457,NULL,NULL,0,1),

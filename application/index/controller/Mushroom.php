@@ -12,29 +12,7 @@ class Mushroom extends Base
         $this -> view -> assign('title', '蘑菇分析');
         $this -> view -> assign('keywords', 'mushroom');
         $this -> view -> assign('desc', 'mushroom');    
-        //获取所有蘑菇表数据
-    //     $mushroom = GradeModel::all();
 
-    //     //获取记录数量
-    //     $count = GradeModel::count();
-    //     //遍历grade表
-    //     foreach ($mushroom as $value){
-    //         $data = [
-    //             'id' => $value->id,
-    //             // 'name' => $value->name,
-    //             // 'length' => $value->length,
-    //             // 'grade' => $value->grade,
-    //             // 'status' => $value->status,
-    //             // 'create_time' => $value->create_time,
-    //             // 'create_time' => $value->create_time,
-    //             // 'mushroom' => $value->mushroom,
-    //         ];
-    //         //每次关联查询结果,保存到数组$gradeList中
-    //         $index[] = $data;
-    //     }
-
-        // $this -> view -> assign('index', $index);
-    //     $this -> view -> assign('count', $count);
  $count = 0;
         $gradeList = [];
         //获取所有蘑菇表数据
